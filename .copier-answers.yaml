@@ -1,0 +1,12 @@
+# Changes here will be overwritten by Copier
+_commit: b8951e0
+_src_path: https://github.com/python-project-templates/base.git
+add_docs: true
+add_extension: rust
+add_wiki: false
+email: prettygoodcapital@gmail.com
+github: prettygoodcapital
+project_description: Standard financial risk tools
+project_name: finance risk
+python_version_primary: '3.11'
+team: PrettyGoodCapital
