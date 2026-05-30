@@ -1,5 +1,5 @@
 [package]
-name = "finance_risk"
+name = "finance-risk"
 version = "0.1.0"
 authors = ["PrettyGoodCapital <prettygoodcapital@gmail.com>"]
 edition = "2021"
