@@ -10,7 +10,7 @@ path = "rust/python/lib.rs"
 crate-type = ["cdylib"]
 
 [dependencies]
-finance_risk = { path = "./rust", version = "*" }
+finance-risk = { path = "./rust", version = "*" }
 pyo3 = { version = "0.28.2", features = ["abi3", "extension-module", "multiple-pymethods"] }
 
 [profile.release]
