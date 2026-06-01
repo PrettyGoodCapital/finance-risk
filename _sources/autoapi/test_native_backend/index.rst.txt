@@ -1,0 +1,22 @@
+test_native_backend
+===================
+
+.. py:module:: test_native_backend
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   test_native_backend.test_native_backend_exposes_risk_kernels
+   test_native_backend.test_public_covariance_delegates_to_native_backend
+
+
+Module Contents
+---------------
+
+.. py:function:: test_native_backend_exposes_risk_kernels() -> None
+
+.. py:function:: test_public_covariance_delegates_to_native_backend(monkeypatch: pytest.MonkeyPatch) -> None
+

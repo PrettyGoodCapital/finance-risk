@@ -1,0 +1,28 @@
+test_covariance
+===============
+
+.. py:module:: test_covariance
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   test_covariance._returns
+   test_covariance.test_sample_covariance_keeps_assets_and_matches_numpy
+   test_covariance.test_shrinkage_covariances_are_psd_and_report_shrinkage
+   test_covariance.test_correlation_round_trip_and_nearest_psd
+
+
+Module Contents
+---------------
+
+.. py:function:: _returns() -> numpy.ndarray
+
+.. py:function:: test_sample_covariance_keeps_assets_and_matches_numpy() -> None
+
+.. py:function:: test_shrinkage_covariances_are_psd_and_report_shrinkage() -> None
+
+.. py:function:: test_correlation_round_trip_and_nearest_psd() -> None
+

@@ -1,0 +1,22 @@
+test_cross_asset_execution
+==========================
+
+.. py:module:: test_cross_asset_execution
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   test_cross_asset_execution.test_cross_asset_correlation_cointegration_and_transfer_entropy
+   test_cross_asset_execution.test_execution_models_return_complete_schedules
+
+
+Module Contents
+---------------
+
+.. py:function:: test_cross_asset_correlation_cointegration_and_transfer_entropy() -> None
+
+.. py:function:: test_execution_models_return_complete_schedules() -> None
+
