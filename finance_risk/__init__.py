@@ -2,6 +2,7 @@ from __future__ import annotations
 
 __version__ = "0.1.0"
 
+from .characteristics import CharacteristicFactorModel, clean_characteristics, fit_characteristic_factor_model  # noqa: F401
 from .covariance import (  # noqa: F401
     CovarianceEstimate,
     correlation_to_covariance,
@@ -24,6 +25,7 @@ from .factor import FactorRiskDecomposition, factor_risk_decomposition  # noqa: 
 
 __all__ = [
     "CovarianceEstimate",
+    "CharacteristicFactorModel",
     "sample_covariance",
     "ledoit_wolf_covariance",
     "oas_covariance",
@@ -42,4 +44,6 @@ __all__ = [
     "optimal_execution_trajectory",
     "FactorRiskDecomposition",
     "factor_risk_decomposition",
+    "clean_characteristics",
+    "fit_characteristic_factor_model",
 ]
