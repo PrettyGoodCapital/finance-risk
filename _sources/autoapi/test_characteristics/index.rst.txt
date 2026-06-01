@@ -1,0 +1,22 @@
+test_characteristics
+====================
+
+.. py:module:: test_characteristics
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   test_characteristics.test_clean_characteristics_standardizes_columns
+   test_characteristics.test_fit_characteristic_factor_model_smoke
+
+
+Module Contents
+---------------
+
+.. py:function:: test_clean_characteristics_standardizes_columns() -> None
+
+.. py:function:: test_fit_characteristic_factor_model_smoke() -> None
+

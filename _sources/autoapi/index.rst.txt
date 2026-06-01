@@ -10,6 +10,7 @@ This page contains auto-generated API reference documentation [#f1]_.
    /autoapi/finance_risk/index
    /autoapi/test_covariance/index
    /autoapi/test_native_backend/index
+   /autoapi/test_characteristics/index
    /autoapi/test_cross_asset_execution/index
 
 .. [#f1] Created with `sphinx-autoapi <https://github.com/readthedocs/sphinx-autoapi>`_

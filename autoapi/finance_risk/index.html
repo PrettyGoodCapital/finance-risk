@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="finance_risk.covariance" href="covariance/index.html"><link rel="prev" title="test_all" href="../test_all/index.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="finance_risk.characteristics" href="characteristics/index.html"><link rel="prev" title="test_all" href="../test_all/index.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.12.19 -->
         <title>finance_risk - finance risk v0.1.0</title>
@@ -200,6 +200,7 @@
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">API Reference</a><input aria-label="Toggle navigation of API Reference" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../test_all/index.html">test_all</a></li>
 <li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#">finance_risk</a><input aria-label="Toggle navigation of finance_risk" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="characteristics/index.html">finance_risk.characteristics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="covariance/index.html">finance_risk.covariance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cross_asset/index.html">finance_risk.cross_asset</a></li>
 <li class="toctree-l3"><a class="reference internal" href="execution/index.html">finance_risk.execution</a></li>
@@ -208,6 +209,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../test_covariance/index.html">test_covariance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../test_native_backend/index.html">test_native_backend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../test_characteristics/index.html">test_characteristics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../test_cross_asset_execution/index.html">test_cross_asset_execution</a></li>
 </ul>
 </li>
@@ -255,6 +257,7 @@
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="characteristics/index.html">finance_risk.characteristics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="covariance/index.html">finance_risk.covariance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cross_asset/index.html">finance_risk.cross_asset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="execution/index.html">finance_risk.execution</a></li>
@@ -267,19 +270,22 @@
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.CovarianceEstimate" title="finance_risk.CovarianceEstimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CovarianceEstimate</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.CharacteristicFactorModel" title="finance_risk.CharacteristicFactorModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CharacteristicFactorModel</span></code></a></p></td>
 <td><p>!!! abstract &quot;Usage Documentation&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.CointegrationSpread" title="finance_risk.CointegrationSpread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CointegrationSpread</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.CovarianceEstimate" title="finance_risk.CovarianceEstimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CovarianceEstimate</span></code></a></p></td>
 <td><p>!!! abstract &quot;Usage Documentation&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.ExecutionTrajectory" title="finance_risk.ExecutionTrajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExecutionTrajectory</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.CointegrationSpread" title="finance_risk.CointegrationSpread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CointegrationSpread</span></code></a></p></td>
 <td><p>!!! abstract &quot;Usage Documentation&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.MarketImpactEstimate" title="finance_risk.MarketImpactEstimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MarketImpactEstimate</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.ExecutionTrajectory" title="finance_risk.ExecutionTrajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExecutionTrajectory</span></code></a></p></td>
 <td><p>!!! abstract &quot;Usage Documentation&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.FactorRiskDecomposition" title="finance_risk.FactorRiskDecomposition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FactorRiskDecomposition</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.MarketImpactEstimate" title="finance_risk.MarketImpactEstimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MarketImpactEstimate</span></code></a></p></td>
+<td><p>!!! abstract &quot;Usage Documentation&quot;</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.FactorRiskDecomposition" title="finance_risk.FactorRiskDecomposition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FactorRiskDecomposition</span></code></a></p></td>
 <td><p>!!! abstract &quot;Usage Documentation&quot;</p></td>
 </tr>
 </tbody>
@@ -291,6 +297,12 @@
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.clean_characteristics" title="finance_risk.clean_characteristics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clean_characteristics</span></code></a>(→ numpy.ndarray)</p></td>
+<td><p>Winsorize and z-score characteristic matrix column-wise.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.fit_characteristic_factor_model" title="finance_risk.fit_characteristic_factor_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_characteristic_factor_model</span></code></a>(...)</p></td>
+<td><p>Fit cross-sectional returns on cleaned characteristics.</p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.correlation_to_covariance" title="finance_risk.correlation_to_covariance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">correlation_to_covariance</span></code></a>(→ numpy.ndarray)</p></td>
 <td><p></p></td>
 </tr>
@@ -339,6 +351,162 @@
 </section>
 <section id="package-contents">
 <h2>Package Contents<a class="headerlink" href="#package-contents" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finance_risk.</span></span><span class="sig-name descname"><span class="pre">CharacteristicFactorModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**data:</span> <span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/finance_risk/characteristics.html#CharacteristicFactorModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#finance_risk.CharacteristicFactorModel" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">pydantic.BaseModel</span></code></p>
+<dl class="simple">
+<dt>!!! abstract “Usage Documentation”</dt><dd><p>[Models](../concepts/models.md)</p>
+</dd>
+</dl>
+<p>A base class for creating Pydantic models.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__class_vars__">
+<span class="sig-name descname"><span class="pre">__class_vars__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__class_vars__" title="Link to this definition">¶</a></dt>
+<dd><p>The names of the class variables defined on the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__private_attributes__">
+<span class="sig-name descname"><span class="pre">__private_attributes__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__private_attributes__" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the private attributes of the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__signature__">
+<span class="sig-name descname"><span class="pre">__signature__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__signature__" title="Link to this definition">¶</a></dt>
+<dd><p>The synthesized <cite>__init__</cite> [<cite>Signature</cite>][inspect.Signature] of the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__pydantic_complete__">
+<span class="sig-name descname"><span class="pre">__pydantic_complete__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__pydantic_complete__" title="Link to this definition">¶</a></dt>
+<dd><p>Whether model building is completed, or if there are still undefined fields.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__pydantic_core_schema__">
+<span class="sig-name descname"><span class="pre">__pydantic_core_schema__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__pydantic_core_schema__" title="Link to this definition">¶</a></dt>
+<dd><p>The core schema of the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__pydantic_custom_init__">
+<span class="sig-name descname"><span class="pre">__pydantic_custom_init__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__pydantic_custom_init__" title="Link to this definition">¶</a></dt>
+<dd><p>Whether the model has a custom <cite>__init__</cite> function.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__pydantic_decorators__">
+<span class="sig-name descname"><span class="pre">__pydantic_decorators__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__pydantic_decorators__" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata containing the decorators defined on the model.
+This replaces <cite>Model.__validators__</cite> and <cite>Model.__root_validators__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__pydantic_generic_metadata__">
+<span class="sig-name descname"><span class="pre">__pydantic_generic_metadata__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__pydantic_generic_metadata__" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary containing metadata about generic Pydantic models.
+The <cite>origin</cite> and <cite>args</cite> items map to the [<cite>__origin__</cite>][genericalias.__origin__]
+and [<cite>__args__</cite>][genericalias.__args__] attributes of [generic aliases][types-genericalias],
+and the <cite>parameter</cite> item maps to the <cite>__parameter__</cite> attribute of generic classes.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__pydantic_parent_namespace__">
+<span class="sig-name descname"><span class="pre">__pydantic_parent_namespace__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__pydantic_parent_namespace__" title="Link to this definition">¶</a></dt>
+<dd><p>Parent namespace of the model, used for automatic rebuilding of models.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__pydantic_post_init__">
+<span class="sig-name descname"><span class="pre">__pydantic_post_init__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__pydantic_post_init__" title="Link to this definition">¶</a></dt>
+<dd><p>The name of the post-init method for the model, if defined.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__pydantic_root_model__">
+<span class="sig-name descname"><span class="pre">__pydantic_root_model__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__pydantic_root_model__" title="Link to this definition">¶</a></dt>
+<dd><p>Whether the model is a [<cite>RootModel</cite>][pydantic.root_model.RootModel].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__pydantic_serializer__">
+<span class="sig-name descname"><span class="pre">__pydantic_serializer__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__pydantic_serializer__" title="Link to this definition">¶</a></dt>
+<dd><p>The <cite>pydantic-core</cite> <cite>SchemaSerializer</cite> used to dump instances of the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__pydantic_validator__">
+<span class="sig-name descname"><span class="pre">__pydantic_validator__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__pydantic_validator__" title="Link to this definition">¶</a></dt>
+<dd><p>The <cite>pydantic-core</cite> <cite>SchemaValidator</cite> used to validate instances of the model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__pydantic_fields__">
+<span class="sig-name descname"><span class="pre">__pydantic_fields__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__pydantic_fields__" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of field names and their corresponding [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo] objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__pydantic_computed_fields__">
+<span class="sig-name descname"><span class="pre">__pydantic_computed_fields__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__pydantic_computed_fields__" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding [<cite>ComputedFieldInfo</cite>][pydantic.fields.ComputedFieldInfo] objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__pydantic_extra__">
+<span class="sig-name descname"><span class="pre">__pydantic_extra__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__pydantic_extra__" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary containing extra values, if [<cite>extra</cite>][pydantic.config.ConfigDict.extra]
+is set to <cite>‘allow’</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__pydantic_fields_set__">
+<span class="sig-name descname"><span class="pre">__pydantic_fields_set__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__pydantic_fields_set__" title="Link to this definition">¶</a></dt>
+<dd><p>The names of fields explicitly set during instantiation.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.__pydantic_private__">
+<span class="sig-name descname"><span class="pre">__pydantic_private__</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.__pydantic_private__" title="Link to this definition">¶</a></dt>
+<dd><p>Values of private attributes set on the model instance.</p>
+</dd></dl>
+
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.factor_returns">
+<span class="sig-name descname"><span class="pre">factor_returns</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Ellipsis</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.factor_returns" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="finance_risk.CharacteristicFactorModel.residual_variance">
+<span class="sig-name descname"><span class="pre">residual_variance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Ellipsis</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#finance_risk.CharacteristicFactorModel.residual_variance" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="finance_risk.clean_characteristics">
+<span class="sig-prename descclassname"><span class="pre">finance_risk.</span></span><span class="sig-name descname"><span class="pre">clean_characteristics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">winsor_z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="reference internal" href="../../_modules/finance_risk/characteristics.html#clean_characteristics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#finance_risk.clean_characteristics" title="Link to this definition">¶</a></dt>
+<dd><p>Winsorize and z-score characteristic matrix column-wise.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="finance_risk.fit_characteristic_factor_model">
+<span class="sig-prename descclassname"><span class="pre">finance_risk.</span></span><span class="sig-name descname"><span class="pre">fit_characteristic_factor_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">characteristics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">ridge</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#finance_risk.CharacteristicFactorModel" title="finance_risk.CharacteristicFactorModel"><span class="pre">CharacteristicFactorModel</span></a></span></span><a class="reference internal" href="../../_modules/finance_risk/characteristics.html#fit_characteristic_factor_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#finance_risk.fit_characteristic_factor_model" title="Link to this definition">¶</a></dt>
+<dd><p>Fit cross-sectional returns on cleaned characteristics.</p>
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="finance_risk.CovarianceEstimate">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finance_risk.</span></span><span class="sig-name descname"><span class="pre">CovarianceEstimate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**data:</span> <span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/finance_risk/covariance.html#CovarianceEstimate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#finance_risk.CovarianceEstimate" title="Link to this definition">¶</a></dt>
@@ -1187,12 +1355,12 @@ validated to form a valid model.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="covariance/index.html">
+          <a class="next-page" href="characteristics/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">finance_risk.covariance</div>
+                <div class="title">finance_risk.characteristics</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -1242,6 +1410,32 @@ validated to form a valid model.</p>
 <li><a class="reference internal" href="#classes">Classes</a></li>
 <li><a class="reference internal" href="#functions">Functions</a></li>
 <li><a class="reference internal" href="#package-contents">Package Contents</a><ul>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel</span></code></a><ul>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__class_vars__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__class_vars__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__private_attributes__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__private_attributes__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__signature__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__signature__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__pydantic_complete__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__pydantic_complete__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__pydantic_core_schema__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__pydantic_core_schema__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__pydantic_custom_init__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__pydantic_custom_init__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__pydantic_decorators__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__pydantic_decorators__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__pydantic_generic_metadata__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__pydantic_generic_metadata__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__pydantic_parent_namespace__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__pydantic_parent_namespace__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__pydantic_post_init__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__pydantic_post_init__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__pydantic_root_model__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__pydantic_root_model__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__pydantic_serializer__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__pydantic_serializer__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__pydantic_validator__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__pydantic_validator__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__pydantic_fields__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__pydantic_fields__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__pydantic_computed_fields__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__pydantic_computed_fields__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__pydantic_extra__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__pydantic_extra__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__pydantic_fields_set__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__pydantic_fields_set__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.__pydantic_private__"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.__pydantic_private__</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.model_config"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.model_config</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.factor_returns"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.factor_returns</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.CharacteristicFactorModel.residual_variance"><code class="docutils literal notranslate"><span class="pre">CharacteristicFactorModel.residual_variance</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#finance_risk.clean_characteristics"><code class="docutils literal notranslate"><span class="pre">clean_characteristics()</span></code></a></li>
+<li><a class="reference internal" href="#finance_risk.fit_characteristic_factor_model"><code class="docutils literal notranslate"><span class="pre">fit_characteristic_factor_model()</span></code></a></li>
 <li><a class="reference internal" href="#finance_risk.CovarianceEstimate"><code class="docutils literal notranslate"><span class="pre">CovarianceEstimate</span></code></a><ul>
 <li><a class="reference internal" href="#finance_risk.CovarianceEstimate.__class_vars__"><code class="docutils literal notranslate"><span class="pre">CovarianceEstimate.__class_vars__</span></code></a></li>
 <li><a class="reference internal" href="#finance_risk.CovarianceEstimate.__private_attributes__"><code class="docutils literal notranslate"><span class="pre">CovarianceEstimate.__private_attributes__</span></code></a></li>
