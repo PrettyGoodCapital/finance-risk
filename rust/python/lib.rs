@@ -1,9 +1,5 @@
 use pyo3::prelude::*;
 
-mod example;
-
-pub use example::Example;
-
 fn map_err(error: String) -> PyErr {
     pyo3::exceptions::PyValueError::new_err(error)
 }
@@ -112,8 +108,6 @@ fn factor_risk_decomposition(
 
 #[pymodule]
 fn finance_risk(_py: Python, m: &Bound<PyModule>) -> PyResult<()> {
-    // Example
-    m.add_class::<Example>().unwrap();
     m.add_function(wrap_pyfunction!(sample_covariance_matrix, m)?)?;
     m.add_function(wrap_pyfunction!(ledoit_wolf_covariance_matrix, m)?)?;
     m.add_function(wrap_pyfunction!(oas_covariance_matrix, m)?)?;
