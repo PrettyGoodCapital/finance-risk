@@ -139,7 +139,7 @@ Module Contents
       :type:  dict[str, float]
 
 
-.. py:function:: factor_risk_decomposition(weights: Any, factor_loadings: Any, factor_covariance: Any, specific_variance: Any, *, factors: Sequence[str] | None = None) -> FactorRiskDecomposition
+.. py:function:: factor_risk_decomposition(weights: Any, factor_loadings: Any, factor_covariance: Any, specific_variance: Any, *, factors: collections.abc.Sequence[str] | None = None) -> FactorRiskDecomposition
 
    Decompose portfolio variance into systematic factor and specific risk.
 

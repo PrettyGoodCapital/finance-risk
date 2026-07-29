@@ -302,7 +302,7 @@ Package Contents
 
 .. py:function:: covariance_to_correlation(covariance: Any) -> numpy.ndarray
 
-.. py:function:: ledoit_wolf_covariance(data: Any, *, assets: Sequence[str] | None = None, frequency: int = 252) -> CovarianceEstimate
+.. py:function:: ledoit_wolf_covariance(data: Any, *, assets: collections.abc.Sequence[str] | None = None, frequency: int = 252) -> CovarianceEstimate
 
    Ledoit-Wolf constant-variance shrinkage covariance estimate.
 
@@ -312,12 +312,12 @@ Package Contents
    Project a symmetric matrix onto the positive-semidefinite cone.
 
 
-.. py:function:: oas_covariance(data: Any, *, assets: Sequence[str] | None = None, frequency: int = 252) -> CovarianceEstimate
+.. py:function:: oas_covariance(data: Any, *, assets: collections.abc.Sequence[str] | None = None, frequency: int = 252) -> CovarianceEstimate
 
    Oracle Approximating Shrinkage covariance estimate.
 
 
-.. py:function:: sample_covariance(data: Any, *, assets: Sequence[str] | None = None, frequency: int = 252) -> CovarianceEstimate
+.. py:function:: sample_covariance(data: Any, *, assets: collections.abc.Sequence[str] | None = None, frequency: int = 252) -> CovarianceEstimate
 
    Sample covariance of asset returns, annualized by ``frequency``.
 
@@ -803,7 +803,7 @@ Package Contents
       :type:  dict[str, float]
 
 
-.. py:function:: factor_risk_decomposition(weights: Any, factor_loadings: Any, factor_covariance: Any, specific_variance: Any, *, factors: Sequence[str] | None = None) -> FactorRiskDecomposition
+.. py:function:: factor_risk_decomposition(weights: Any, factor_loadings: Any, factor_covariance: Any, specific_variance: Any, *, factors: collections.abc.Sequence[str] | None = None) -> FactorRiskDecomposition
 
    Decompose portfolio variance into systematic factor and specific risk.
 
