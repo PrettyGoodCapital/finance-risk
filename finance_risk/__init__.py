@@ -2,8 +2,8 @@ from __future__ import annotations
 
 __version__ = "0.1.0"
 
-from .characteristics import CharacteristicFactorModel, clean_characteristics, fit_characteristic_factor_model  # noqa: F401
-from .covariance import (  # noqa: F401
+from .characteristics import CharacteristicFactorModel, clean_characteristics, fit_characteristic_factor_model
+from .covariance import (
     CovarianceEstimate,
     correlation_to_covariance,
     covariance_to_correlation,
@@ -12,8 +12,8 @@ from .covariance import (  # noqa: F401
     oas_covariance,
     sample_covariance,
 )
-from .cross_asset import CointegrationSpread, cointegration_spread, rolling_correlation, transfer_entropy  # noqa: F401
-from .execution import (  # noqa: F401
+from .cross_asset import CointegrationSpread, cointegration_spread, rolling_correlation, transfer_entropy
+from .execution import (
     ExecutionTrajectory,
     MarketImpactEstimate,
     almgren_chriss_market_impact,
@@ -21,29 +21,29 @@ from .execution import (  # noqa: F401
     twap_schedule,
     vwap_schedule,
 )
-from .factor import FactorRiskDecomposition, factor_risk_decomposition  # noqa: F401
+from .factor import FactorRiskDecomposition, factor_risk_decomposition
 
 __all__ = [
-    "CovarianceEstimate",
     "CharacteristicFactorModel",
-    "sample_covariance",
-    "ledoit_wolf_covariance",
-    "oas_covariance",
-    "covariance_to_correlation",
-    "correlation_to_covariance",
-    "nearest_positive_semidefinite",
     "CointegrationSpread",
-    "rolling_correlation",
-    "cointegration_spread",
-    "transfer_entropy",
-    "MarketImpactEstimate",
+    "CovarianceEstimate",
     "ExecutionTrajectory",
+    "FactorRiskDecomposition",
+    "MarketImpactEstimate",
     "almgren_chriss_market_impact",
+    "clean_characteristics",
+    "cointegration_spread",
+    "correlation_to_covariance",
+    "covariance_to_correlation",
+    "factor_risk_decomposition",
+    "fit_characteristic_factor_model",
+    "ledoit_wolf_covariance",
+    "nearest_positive_semidefinite",
+    "oas_covariance",
+    "optimal_execution_trajectory",
+    "rolling_correlation",
+    "sample_covariance",
+    "transfer_entropy",
     "twap_schedule",
     "vwap_schedule",
-    "optimal_execution_trajectory",
-    "FactorRiskDecomposition",
-    "factor_risk_decomposition",
-    "clean_characteristics",
-    "fit_characteristic_factor_model",
 ]
