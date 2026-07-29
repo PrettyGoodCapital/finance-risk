@@ -1,4 +1,4 @@
-from finance_risk import *  # noqa
+from finance_risk import *
 
 
 def test_all():

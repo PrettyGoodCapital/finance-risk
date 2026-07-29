@@ -7,7 +7,7 @@ from pydantic import BaseModel, ConfigDict
 
 from . import finance_risk as _native
 
-__all__ = ["CointegrationSpread", "rolling_correlation", "cointegration_spread", "transfer_entropy"]
+__all__ = ["CointegrationSpread", "cointegration_spread", "rolling_correlation", "transfer_entropy"]
 
 
 class CointegrationSpread(BaseModel):

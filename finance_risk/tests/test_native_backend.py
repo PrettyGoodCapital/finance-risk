@@ -15,7 +15,7 @@ def test_native_backend_exposes_risk_kernels() -> None:
 
 
 def test_public_covariance_delegates_to_native_backend(monkeypatch: pytest.MonkeyPatch) -> None:
-    import finance_risk.covariance as covariance
+    from finance_risk import covariance
 
     called: dict[str, object] = {}
 

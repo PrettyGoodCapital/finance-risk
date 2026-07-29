@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from typing import Any, Sequence
+from collections.abc import Sequence
+from typing import Any
 
 import numpy as np
 from pydantic import BaseModel, ConfigDict
@@ -9,12 +10,12 @@ from . import finance_risk as _native
 
 __all__ = [
     "CovarianceEstimate",
-    "sample_covariance",
-    "ledoit_wolf_covariance",
-    "oas_covariance",
-    "covariance_to_correlation",
     "correlation_to_covariance",
+    "covariance_to_correlation",
+    "ledoit_wolf_covariance",
     "nearest_positive_semidefinite",
+    "oas_covariance",
+    "sample_covariance",
 ]
 
 
