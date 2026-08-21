@@ -254,7 +254,7 @@
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">finance_risk</span> <span class="k">as</span> <span class="n">_native</span>
 
-<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CointegrationSpread&quot;</span><span class="p">,</span> <span class="s2">&quot;cointegration_spread&quot;</span><span class="p">,</span> <span class="s2">&quot;rolling_correlation&quot;</span><span class="p">,</span> <span class="s2">&quot;transfer_entropy&quot;</span><span class="p">]</span>
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"CointegrationSpread"</span><span class="p">,</span> <span class="s2">"cointegration_spread"</span><span class="p">,</span> <span class="s2">"rolling_correlation"</span><span class="p">,</span> <span class="s2">"transfer_entropy"</span><span class="p">]</span>
 
 
 <div class="viewcode-block" id="CointegrationSpread">
@@ -269,24 +269,24 @@
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_vector</span><span class="p">(</span><span class="n">values</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
-    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="s2">&quot;to_numpy&quot;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="s2">"to_numpy"</span><span class="p">):</span>
         <span class="n">arr</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
     <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">arr</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;values must not be empty&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"values must not be empty"</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">arr</span>
 
 
 <div class="viewcode-block" id="rolling_correlation">
 <a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.cross_asset.rolling_correlation">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">rolling_correlation</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">window</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Rolling Pearson correlation with leading ``nan`` values before the first full window.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Rolling Pearson correlation with leading ``nan`` values before the first full window."""</span>
     <span class="n">left</span> <span class="o">=</span> <span class="n">_vector</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
     <span class="n">right</span> <span class="o">=</span> <span class="n">_vector</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">left</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="n">right</span><span class="o">.</span><span class="n">shape</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;x and y must have the same length&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"x and y must have the same length"</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">_native</span><span class="o">.</span><span class="n">rolling_correlation</span><span class="p">(</span><span class="n">left</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">right</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">window</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span></div>
 
 
@@ -294,11 +294,11 @@
 <div class="viewcode-block" id="cointegration_spread">
 <a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.cross_asset.cointegration_spread">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">cointegration_spread</span><span class="p">(</span><span class="n">y</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CointegrationSpread</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;OLS hedge ratio and demeaned residual spread for a two-asset pair.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""OLS hedge ratio and demeaned residual spread for a two-asset pair."""</span>
     <span class="n">dependent</span> <span class="o">=</span> <span class="n">_vector</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
     <span class="n">independent</span> <span class="o">=</span> <span class="n">_vector</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">dependent</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="n">independent</span><span class="o">.</span><span class="n">shape</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;x and y must have the same length&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"x and y must have the same length"</span><span class="p">)</span>
     <span class="n">hedge_ratio</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">spread</span> <span class="o">=</span> <span class="n">_native</span><span class="o">.</span><span class="n">cointegration_spread</span><span class="p">(</span><span class="n">dependent</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">independent</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
     <span class="k">return</span> <span class="n">CointegrationSpread</span><span class="p">(</span><span class="n">hedge_ratio</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">hedge_ratio</span><span class="p">),</span> <span class="n">intercept</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">intercept</span><span class="p">),</span> <span class="n">spread</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">spread</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">))</span></div>
 
@@ -307,11 +307,11 @@
 <div class="viewcode-block" id="transfer_entropy">
 <a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.cross_asset.transfer_entropy">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">transfer_entropy</span><span class="p">(</span><span class="n">source</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">bins</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">lag</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Discrete transfer entropy ``source[t-lag] -&gt; target[t]`` in nats.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Discrete transfer entropy ``source[t-lag] -&gt; target[t]`` in nats."""</span>
     <span class="n">src</span> <span class="o">=</span> <span class="n">_vector</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
     <span class="n">tgt</span> <span class="o">=</span> <span class="n">_vector</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">src</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="n">tgt</span><span class="o">.</span><span class="n">shape</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;source and target must have the same length&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"source and target must have the same length"</span><span class="p">)</span>
     <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">_native</span><span class="o">.</span><span class="n">transfer_entropy</span><span class="p">(</span><span class="n">src</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">tgt</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">bins</span><span class="p">,</span> <span class="n">lag</span><span class="p">))</span></div>
 
 </pre></div>

@@ -255,12 +255,12 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">finance_risk</span> <span class="k">as</span> <span class="n">_native</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;ExecutionTrajectory&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;MarketImpactEstimate&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;almgren_chriss_market_impact&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;optimal_execution_trajectory&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;twap_schedule&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;vwap_schedule&quot;</span><span class="p">,</span>
+    <span class="s2">"ExecutionTrajectory"</span><span class="p">,</span>
+    <span class="s2">"MarketImpactEstimate"</span><span class="p">,</span>
+    <span class="s2">"almgren_chriss_market_impact"</span><span class="p">,</span>
+    <span class="s2">"optimal_execution_trajectory"</span><span class="p">,</span>
+    <span class="s2">"twap_schedule"</span><span class="p">,</span>
+    <span class="s2">"vwap_schedule"</span><span class="p">,</span>
 <span class="p">]</span>
 
 
@@ -312,7 +312,7 @@
     <span class="n">temporary_impact</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
     <span class="n">permanent_impact</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MarketImpactEstimate</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Simple Almgren-Chriss style spread, temporary, and permanent cost estimate.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Simple Almgren-Chriss style spread, temporary, and permanent cost estimate."""</span>
     <span class="n">spread_cost</span><span class="p">,</span> <span class="n">temp_cost</span><span class="p">,</span> <span class="n">perm_cost</span><span class="p">,</span> <span class="n">total_cost</span> <span class="o">=</span> <span class="n">_native</span><span class="o">.</span><span class="n">almgren_chriss_market_impact</span><span class="p">(</span>
         <span class="nb">float</span><span class="p">(</span><span class="n">quantity</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">volatility</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">daily_volume</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">spread</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">temporary_impact</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">permanent_impact</span><span class="p">)</span>
     <span class="p">)</span>
@@ -328,7 +328,7 @@
 <div class="viewcode-block" id="optimal_execution_trajectory">
 <a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.execution.optimal_execution_trajectory">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">optimal_execution_trajectory</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">total_quantity</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">periods</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">risk_aversion</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ExecutionTrajectory</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Monotone liquidation trajectory with risk-aversion controlled front-loading.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Monotone liquidation trajectory with risk-aversion controlled front-loading."""</span>
     <span class="n">remaining_raw</span><span class="p">,</span> <span class="n">trades_raw</span> <span class="o">=</span> <span class="n">_native</span><span class="o">.</span><span class="n">optimal_execution_trajectory</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">total_quantity</span><span class="p">),</span> <span class="n">periods</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">risk_aversion</span><span class="p">))</span>
     <span class="n">remaining</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">remaining_raw</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
     <span class="n">trades</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">trades_raw</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
