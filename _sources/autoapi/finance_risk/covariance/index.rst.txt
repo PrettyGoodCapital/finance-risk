@@ -133,7 +133,7 @@ Module Contents
 
 
    .. py:attribute:: assets
-      :type:  tuple[str, Ellipsis]
+      :type:  tuple[str, ...]
 
 
    .. py:attribute:: method

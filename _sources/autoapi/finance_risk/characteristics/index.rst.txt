@@ -125,11 +125,11 @@ Module Contents
 
 
    .. py:attribute:: factor_returns
-      :type:  tuple[float, Ellipsis]
+      :type:  tuple[float, ...]
 
 
    .. py:attribute:: residual_variance
-      :type:  tuple[float, Ellipsis]
+      :type:  tuple[float, ...]
 
 
 .. py:function:: clean_characteristics(values: Any, *, winsor_z: float = 3.0) -> numpy.ndarray
