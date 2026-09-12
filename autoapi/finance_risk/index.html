@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/autodoc_pydantic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/searchlite.css?v=4235115c" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=8dab3a3b" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/custom.css?v=890fd012" />
     
@@ -276,16 +277,13 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.CovarianceEstimate" title="finance_risk.CovarianceEstimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CovarianceEstimate</span></code></a></p></td>
 <td><p>!!! abstract &quot;Usage Documentation&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.CointegrationSpread" title="finance_risk.CointegrationSpread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CointegrationSpread</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.ExecutionTrajectory" title="finance_risk.ExecutionTrajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExecutionTrajectory</span></code></a></p></td>
 <td><p>!!! abstract &quot;Usage Documentation&quot;</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.ExecutionTrajectory" title="finance_risk.ExecutionTrajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExecutionTrajectory</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.MarketImpactEstimate" title="finance_risk.MarketImpactEstimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MarketImpactEstimate</span></code></a></p></td>
 <td><p>!!! abstract &quot;Usage Documentation&quot;</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.MarketImpactEstimate" title="finance_risk.MarketImpactEstimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MarketImpactEstimate</span></code></a></p></td>
-<td><p>!!! abstract &quot;Usage Documentation&quot;</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.FactorRiskDecomposition" title="finance_risk.FactorRiskDecomposition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FactorRiskDecomposition</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.FactorRiskDecomposition" title="finance_risk.FactorRiskDecomposition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FactorRiskDecomposition</span></code></a></p></td>
 <td><p>!!! abstract &quot;Usage Documentation&quot;</p></td>
 </tr>
 </tbody>
@@ -321,28 +319,19 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.sample_covariance" title="finance_risk.sample_covariance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample_covariance</span></code></a>(→ CovarianceEstimate)</p></td>
 <td><p>Sample covariance of asset returns, annualized by <code class="docutils literal notranslate"><span class="pre">frequency</span></code>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.cointegration_spread" title="finance_risk.cointegration_spread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cointegration_spread</span></code></a>(→ CointegrationSpread)</p></td>
-<td><p>OLS hedge ratio and demeaned residual spread for a two-asset pair.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.rolling_correlation" title="finance_risk.rolling_correlation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_correlation</span></code></a>(→ numpy.ndarray)</p></td>
-<td><p>Rolling Pearson correlation with leading <code class="docutils literal notranslate"><span class="pre">nan</span></code> values before the first full window.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.transfer_entropy" title="finance_risk.transfer_entropy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transfer_entropy</span></code></a>(→ float)</p></td>
-<td><p>Discrete transfer entropy <code class="docutils literal notranslate"><span class="pre">source[t-lag]</span> <span class="pre">-&gt;</span> <span class="pre">target[t]</span></code> in nats.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.almgren_chriss_market_impact" title="finance_risk.almgren_chriss_market_impact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">almgren_chriss_market_impact</span></code></a>(→ MarketImpactEstimate)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.almgren_chriss_market_impact" title="finance_risk.almgren_chriss_market_impact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">almgren_chriss_market_impact</span></code></a>(→ MarketImpactEstimate)</p></td>
 <td><p>Simple Almgren-Chriss style spread, temporary, and permanent cost estimate.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.optimal_execution_trajectory" title="finance_risk.optimal_execution_trajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">optimal_execution_trajectory</span></code></a>(→ ExecutionTrajectory)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.optimal_execution_trajectory" title="finance_risk.optimal_execution_trajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">optimal_execution_trajectory</span></code></a>(→ ExecutionTrajectory)</p></td>
 <td><p>Monotone liquidation trajectory with risk-aversion controlled front-loading.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.twap_schedule" title="finance_risk.twap_schedule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">twap_schedule</span></code></a>(→ numpy.ndarray)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.twap_schedule" title="finance_risk.twap_schedule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">twap_schedule</span></code></a>(→ numpy.ndarray)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.vwap_schedule" title="finance_risk.vwap_schedule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vwap_schedule</span></code></a>(→ numpy.ndarray)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.vwap_schedule" title="finance_risk.vwap_schedule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vwap_schedule</span></code></a>(→ numpy.ndarray)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#finance_risk.factor_risk_decomposition" title="finance_risk.factor_risk_decomposition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">factor_risk_decomposition</span></code></a>(→ FactorRiskDecomposition)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#finance_risk.factor_risk_decomposition" title="finance_risk.factor_risk_decomposition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">factor_risk_decomposition</span></code></a>(→ FactorRiskDecomposition)</p></td>
 <td><p>Decompose portfolio variance into systematic factor and specific risk.</p></td>
 </tr>
 </tbody>
@@ -698,173 +687,6 @@ validated to form a valid model.</p>
 <dt class="sig sig-object py" id="finance_risk.sample_covariance">
 <span class="sig-prename descclassname"><span class="pre">finance_risk.</span></span><span class="sig-name descname"><span class="pre">sample_covariance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">252</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#finance_risk.CovarianceEstimate" title="finance_risk.CovarianceEstimate"><span class="pre">CovarianceEstimate</span></a></span></span><a class="reference internal" href="../../_modules/finance_risk/covariance.html#sample_covariance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#finance_risk.sample_covariance" title="Link to this definition">¶</a></dt>
 <dd><p>Sample covariance of asset returns, annualized by <code class="docutils literal notranslate"><span class="pre">frequency</span></code>.</p>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finance_risk.</span></span><span class="sig-name descname"><span class="pre">CointegrationSpread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**data:</span> <span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/finance_risk/cross_asset.html#CointegrationSpread"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#finance_risk.CointegrationSpread" title="Link to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">pydantic.BaseModel</span></code></p>
-<dl class="simple">
-<dt>!!! abstract “Usage Documentation”</dt><dd><p>[Models](../concepts/models.md)</p>
-</dd>
-</dl>
-<p>A base class for creating Pydantic models.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__class_vars__">
-<span class="sig-name descname"><span class="pre">__class_vars__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__class_vars__" title="Link to this definition">¶</a></dt>
-<dd><p>The names of the class variables defined on the model.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__private_attributes__">
-<span class="sig-name descname"><span class="pre">__private_attributes__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__private_attributes__" title="Link to this definition">¶</a></dt>
-<dd><p>Metadata about the private attributes of the model.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__signature__">
-<span class="sig-name descname"><span class="pre">__signature__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__signature__" title="Link to this definition">¶</a></dt>
-<dd><p>The synthesized <cite>__init__</cite> [<cite>Signature</cite>][inspect.Signature] of the model.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__pydantic_complete__">
-<span class="sig-name descname"><span class="pre">__pydantic_complete__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__pydantic_complete__" title="Link to this definition">¶</a></dt>
-<dd><p>Whether model building is completed, or if there are still undefined fields.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__pydantic_core_schema__">
-<span class="sig-name descname"><span class="pre">__pydantic_core_schema__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__pydantic_core_schema__" title="Link to this definition">¶</a></dt>
-<dd><p>The core schema of the model.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__pydantic_custom_init__">
-<span class="sig-name descname"><span class="pre">__pydantic_custom_init__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__pydantic_custom_init__" title="Link to this definition">¶</a></dt>
-<dd><p>Whether the model has a custom <cite>__init__</cite> function.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__pydantic_decorators__">
-<span class="sig-name descname"><span class="pre">__pydantic_decorators__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__pydantic_decorators__" title="Link to this definition">¶</a></dt>
-<dd><p>Metadata containing the decorators defined on the model.
-This replaces <cite>Model.__validators__</cite> and <cite>Model.__root_validators__</cite> from Pydantic V1.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__pydantic_generic_metadata__">
-<span class="sig-name descname"><span class="pre">__pydantic_generic_metadata__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__pydantic_generic_metadata__" title="Link to this definition">¶</a></dt>
-<dd><p>A dictionary containing metadata about generic Pydantic models.
-The <cite>origin</cite> and <cite>args</cite> items map to the [<cite>__origin__</cite>][genericalias.__origin__]
-and [<cite>__args__</cite>][genericalias.__args__] attributes of [generic aliases][types-genericalias],
-and the <cite>parameter</cite> item maps to the <cite>__parameter__</cite> attribute of generic classes.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__pydantic_parent_namespace__">
-<span class="sig-name descname"><span class="pre">__pydantic_parent_namespace__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__pydantic_parent_namespace__" title="Link to this definition">¶</a></dt>
-<dd><p>Parent namespace of the model, used for automatic rebuilding of models.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__pydantic_post_init__">
-<span class="sig-name descname"><span class="pre">__pydantic_post_init__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__pydantic_post_init__" title="Link to this definition">¶</a></dt>
-<dd><p>The name of the post-init method for the model, if defined.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__pydantic_root_model__">
-<span class="sig-name descname"><span class="pre">__pydantic_root_model__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__pydantic_root_model__" title="Link to this definition">¶</a></dt>
-<dd><p>Whether the model is a [<cite>RootModel</cite>][pydantic.root_model.RootModel].</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__pydantic_serializer__">
-<span class="sig-name descname"><span class="pre">__pydantic_serializer__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__pydantic_serializer__" title="Link to this definition">¶</a></dt>
-<dd><p>The <cite>pydantic-core</cite> <cite>SchemaSerializer</cite> used to dump instances of the model.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__pydantic_validator__">
-<span class="sig-name descname"><span class="pre">__pydantic_validator__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__pydantic_validator__" title="Link to this definition">¶</a></dt>
-<dd><p>The <cite>pydantic-core</cite> <cite>SchemaValidator</cite> used to validate instances of the model.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__pydantic_fields__">
-<span class="sig-name descname"><span class="pre">__pydantic_fields__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__pydantic_fields__" title="Link to this definition">¶</a></dt>
-<dd><p>A dictionary of field names and their corresponding [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo] objects.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__pydantic_computed_fields__">
-<span class="sig-name descname"><span class="pre">__pydantic_computed_fields__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__pydantic_computed_fields__" title="Link to this definition">¶</a></dt>
-<dd><p>A dictionary of computed field names and their corresponding [<cite>ComputedFieldInfo</cite>][pydantic.fields.ComputedFieldInfo] objects.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__pydantic_extra__">
-<span class="sig-name descname"><span class="pre">__pydantic_extra__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__pydantic_extra__" title="Link to this definition">¶</a></dt>
-<dd><p>A dictionary containing extra values, if [<cite>extra</cite>][pydantic.config.ConfigDict.extra]
-is set to <cite>‘allow’</cite>.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__pydantic_fields_set__">
-<span class="sig-name descname"><span class="pre">__pydantic_fields_set__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__pydantic_fields_set__" title="Link to this definition">¶</a></dt>
-<dd><p>The names of fields explicitly set during instantiation.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.__pydantic_private__">
-<span class="sig-name descname"><span class="pre">__pydantic_private__</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.__pydantic_private__" title="Link to this definition">¶</a></dt>
-<dd><p>Values of private attributes set on the model instance.</p>
-</dd></dl>
-
-<p>Create a new model by parsing and validating input data from keyword arguments.</p>
-<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
-validated to form a valid model.</p>
-<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.model_config">
-<span class="sig-name descname"><span class="pre">model_config</span></span><a class="headerlink" href="#finance_risk.CointegrationSpread.model_config" title="Link to this definition">¶</a></dt>
-<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.hedge_ratio">
-<span class="sig-name descname"><span class="pre">hedge_ratio</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#finance_risk.CointegrationSpread.hedge_ratio" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.intercept">
-<span class="sig-name descname"><span class="pre">intercept</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#finance_risk.CointegrationSpread.intercept" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="finance_risk.CointegrationSpread.spread">
-<span class="sig-name descname"><span class="pre">spread</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span></em><a class="headerlink" href="#finance_risk.CointegrationSpread.spread" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="finance_risk.cointegration_spread">
-<span class="sig-prename descclassname"><span class="pre">finance_risk.</span></span><span class="sig-name descname"><span class="pre">cointegration_spread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#finance_risk.CointegrationSpread" title="finance_risk.CointegrationSpread"><span class="pre">CointegrationSpread</span></a></span></span><a class="reference internal" href="../../_modules/finance_risk/cross_asset.html#cointegration_spread"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#finance_risk.cointegration_spread" title="Link to this definition">¶</a></dt>
-<dd><p>OLS hedge ratio and demeaned residual spread for a two-asset pair.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="finance_risk.rolling_correlation">
-<span class="sig-prename descclassname"><span class="pre">finance_risk.</span></span><span class="sig-name descname"><span class="pre">rolling_correlation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="reference internal" href="../../_modules/finance_risk/cross_asset.html#rolling_correlation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#finance_risk.rolling_correlation" title="Link to this definition">¶</a></dt>
-<dd><p>Rolling Pearson correlation with leading <code class="docutils literal notranslate"><span class="pre">nan</span></code> values before the first full window.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="finance_risk.transfer_entropy">
-<span class="sig-prename descclassname"><span class="pre">finance_risk.</span></span><span class="sig-name descname"><span class="pre">transfer_entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="../../_modules/finance_risk/cross_asset.html#transfer_entropy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#finance_risk.transfer_entropy" title="Link to this definition">¶</a></dt>
-<dd><p>Discrete transfer entropy <code class="docutils literal notranslate"><span class="pre">source[t-lag]</span> <span class="pre">-&gt;</span> <span class="pre">target[t]</span></code> in nats.</p>
 </dd></dl>
 
 <dl class="py class">
@@ -1469,34 +1291,6 @@ validated to form a valid model.</p>
 <li><a class="reference internal" href="#finance_risk.nearest_positive_semidefinite"><code class="docutils literal notranslate"><span class="pre">nearest_positive_semidefinite()</span></code></a></li>
 <li><a class="reference internal" href="#finance_risk.oas_covariance"><code class="docutils literal notranslate"><span class="pre">oas_covariance()</span></code></a></li>
 <li><a class="reference internal" href="#finance_risk.sample_covariance"><code class="docutils literal notranslate"><span class="pre">sample_covariance()</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread</span></code></a><ul>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__class_vars__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__class_vars__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__private_attributes__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__private_attributes__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__signature__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__signature__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__pydantic_complete__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__pydantic_complete__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__pydantic_core_schema__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__pydantic_core_schema__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__pydantic_custom_init__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__pydantic_custom_init__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__pydantic_decorators__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__pydantic_decorators__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__pydantic_generic_metadata__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__pydantic_generic_metadata__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__pydantic_parent_namespace__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__pydantic_parent_namespace__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__pydantic_post_init__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__pydantic_post_init__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__pydantic_root_model__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__pydantic_root_model__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__pydantic_serializer__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__pydantic_serializer__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__pydantic_validator__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__pydantic_validator__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__pydantic_fields__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__pydantic_fields__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__pydantic_computed_fields__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__pydantic_computed_fields__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__pydantic_extra__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__pydantic_extra__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__pydantic_fields_set__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__pydantic_fields_set__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.__pydantic_private__"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.__pydantic_private__</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.model_config"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.model_config</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.hedge_ratio"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.hedge_ratio</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.intercept"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.intercept</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.CointegrationSpread.spread"><code class="docutils literal notranslate"><span class="pre">CointegrationSpread.spread</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#finance_risk.cointegration_spread"><code class="docutils literal notranslate"><span class="pre">cointegration_spread()</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.rolling_correlation"><code class="docutils literal notranslate"><span class="pre">rolling_correlation()</span></code></a></li>
-<li><a class="reference internal" href="#finance_risk.transfer_entropy"><code class="docutils literal notranslate"><span class="pre">transfer_entropy()</span></code></a></li>
 <li><a class="reference internal" href="#finance_risk.ExecutionTrajectory"><code class="docutils literal notranslate"><span class="pre">ExecutionTrajectory</span></code></a><ul>
 <li><a class="reference internal" href="#finance_risk.ExecutionTrajectory.__class_vars__"><code class="docutils literal notranslate"><span class="pre">ExecutionTrajectory.__class_vars__</span></code></a></li>
 <li><a class="reference internal" href="#finance_risk.ExecutionTrajectory.__private_attributes__"><code class="docutils literal notranslate"><span class="pre">ExecutionTrajectory.__private_attributes__</span></code></a></li>
@@ -1598,6 +1392,8 @@ validated to form a valid model.</p>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-searchlite-index="searchlite-index.json" defer="defer" src="../../_static/searchlite.js?v=a5320898"></script>
+    <script data-searchlite-adopt="true" defer="defer" src="../../_static/searchlite-ui.js?v=4e4bdd69"></script>
     <script src="../../_static/js/custom.js?v=956e5d78"></script>
     </body>
 </html>

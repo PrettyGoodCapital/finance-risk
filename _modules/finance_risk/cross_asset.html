@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/autodoc_pydantic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/searchlite.css?v=4235115c" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=8dab3a3b" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/custom.css?v=890fd012" />
     
@@ -258,7 +259,7 @@
 
 
 <div class="viewcode-block" id="CointegrationSpread">
-<a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.cross_asset.CointegrationSpread">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_risk/cross_asset/index.html#finance_risk.cross_asset.CointegrationSpread">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">CointegrationSpread</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
     <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span><span class="n">arbitrary_types_allowed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
@@ -280,7 +281,7 @@
 
 
 <div class="viewcode-block" id="rolling_correlation">
-<a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.cross_asset.rolling_correlation">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_risk/cross_asset/index.html#finance_risk.cross_asset.rolling_correlation">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">rolling_correlation</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">window</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Rolling Pearson correlation with leading ``nan`` values before the first full window."""</span>
     <span class="n">left</span> <span class="o">=</span> <span class="n">_vector</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -292,7 +293,7 @@
 
 
 <div class="viewcode-block" id="cointegration_spread">
-<a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.cross_asset.cointegration_spread">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_risk/cross_asset/index.html#finance_risk.cross_asset.cointegration_spread">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">cointegration_spread</span><span class="p">(</span><span class="n">y</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CointegrationSpread</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""OLS hedge ratio and demeaned residual spread for a two-asset pair."""</span>
     <span class="n">dependent</span> <span class="o">=</span> <span class="n">_vector</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="transfer_entropy">
-<a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.cross_asset.transfer_entropy">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_risk/cross_asset/index.html#finance_risk.cross_asset.transfer_entropy">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">transfer_entropy</span><span class="p">(</span><span class="n">source</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">bins</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">lag</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Discrete transfer entropy ``source[t-lag] -&gt; target[t]`` in nats."""</span>
     <span class="n">src</span> <span class="o">=</span> <span class="n">_vector</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
@@ -353,11 +354,15 @@
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-searchlite-index="searchlite-index.json" defer="defer" src="../../_static/searchlite.js?v=a5320898"></script>
+    <script data-searchlite-adopt="true" defer="defer" src="../../_static/searchlite-ui.js?v=4e4bdd69"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
     <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.12.1/dist/mermaid.esm.min.mjs";
 
 
 import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.2.0/dist/mermaid-layout-elk.esm.min.mjs"
+
+
 
 
 const initStyles = () => {
