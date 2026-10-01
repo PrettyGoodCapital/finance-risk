@@ -266,7 +266,7 @@
 
 
 <div class="viewcode-block" id="MarketImpactEstimate">
-<a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.execution.MarketImpactEstimate">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_risk/execution/index.html#finance_risk.execution.MarketImpactEstimate">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MarketImpactEstimate</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
     <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
@@ -278,7 +278,7 @@
 
 
 <div class="viewcode-block" id="ExecutionTrajectory">
-<a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.execution.ExecutionTrajectory">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_risk/execution/index.html#finance_risk.execution.ExecutionTrajectory">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ExecutionTrajectory</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
     <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span><span class="n">arbitrary_types_allowed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
@@ -288,14 +288,14 @@
 
 
 <div class="viewcode-block" id="twap_schedule">
-<a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.execution.twap_schedule">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_risk/execution/index.html#finance_risk.execution.twap_schedule">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">twap_schedule</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">total_quantity</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">periods</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">_native</span><span class="o">.</span><span class="n">twap_schedule</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">total_quantity</span><span class="p">),</span> <span class="n">periods</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span></div>
 
 
 
 <div class="viewcode-block" id="vwap_schedule">
-<a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.execution.vwap_schedule">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_risk/execution/index.html#finance_risk.execution.vwap_schedule">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">vwap_schedule</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">total_quantity</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">volume_curve</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
     <span class="n">curve</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">volume_curve</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">_native</span><span class="o">.</span><span class="n">vwap_schedule</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">total_quantity</span><span class="p">),</span> <span class="n">curve</span><span class="o">.</span><span class="n">tolist</span><span class="p">()),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span></div>
@@ -303,7 +303,7 @@
 
 
 <div class="viewcode-block" id="almgren_chriss_market_impact">
-<a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.execution.almgren_chriss_market_impact">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_risk/execution/index.html#finance_risk.execution.almgren_chriss_market_impact">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">almgren_chriss_market_impact</span><span class="p">(</span>
     <span class="o">*</span><span class="p">,</span>
     <span class="n">quantity</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
@@ -327,7 +327,7 @@
 
 
 <div class="viewcode-block" id="optimal_execution_trajectory">
-<a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.execution.optimal_execution_trajectory">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_risk/execution/index.html#finance_risk.execution.optimal_execution_trajectory">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">optimal_execution_trajectory</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">total_quantity</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">periods</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">risk_aversion</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ExecutionTrajectory</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Monotone liquidation trajectory with risk-aversion controlled front-loading."""</span>
     <span class="n">remaining_raw</span><span class="p">,</span> <span class="n">trades_raw</span> <span class="o">=</span> <span class="n">_native</span><span class="o">.</span><span class="n">optimal_execution_trajectory</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">total_quantity</span><span class="p">),</span> <span class="n">periods</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">risk_aversion</span><span class="p">))</span>

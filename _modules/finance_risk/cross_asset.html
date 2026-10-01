@@ -259,7 +259,7 @@
 
 
 <div class="viewcode-block" id="CointegrationSpread">
-<a class="viewcode-back" href="../../autoapi/finance_risk/cross_asset/index.html#finance_risk.cross_asset.CointegrationSpread">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.cross_asset.CointegrationSpread">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">CointegrationSpread</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
     <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span><span class="n">arbitrary_types_allowed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
@@ -281,7 +281,7 @@
 
 
 <div class="viewcode-block" id="rolling_correlation">
-<a class="viewcode-back" href="../../autoapi/finance_risk/cross_asset/index.html#finance_risk.cross_asset.rolling_correlation">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.cross_asset.rolling_correlation">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">rolling_correlation</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">window</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Rolling Pearson correlation with leading ``nan`` values before the first full window."""</span>
     <span class="n">left</span> <span class="o">=</span> <span class="n">_vector</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -293,7 +293,7 @@
 
 
 <div class="viewcode-block" id="cointegration_spread">
-<a class="viewcode-back" href="../../autoapi/finance_risk/cross_asset/index.html#finance_risk.cross_asset.cointegration_spread">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.cross_asset.cointegration_spread">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">cointegration_spread</span><span class="p">(</span><span class="n">y</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CointegrationSpread</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""OLS hedge ratio and demeaned residual spread for a two-asset pair."""</span>
     <span class="n">dependent</span> <span class="o">=</span> <span class="n">_vector</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
@@ -306,7 +306,7 @@
 
 
 <div class="viewcode-block" id="transfer_entropy">
-<a class="viewcode-back" href="../../autoapi/finance_risk/cross_asset/index.html#finance_risk.cross_asset.transfer_entropy">[docs]</a>
+<a class="viewcode-back" href="../../autoapi/finance_risk/index.html#finance_risk.cross_asset.transfer_entropy">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">transfer_entropy</span><span class="p">(</span><span class="n">source</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">bins</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">lag</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Discrete transfer entropy ``source[t-lag] -&gt; target[t]`` in nats."""</span>
     <span class="n">src</span> <span class="o">=</span> <span class="n">_vector</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
