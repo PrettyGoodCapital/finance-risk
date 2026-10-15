@@ -45,6 +45,7 @@ develop = [
     "hatch-rs",
     "hatchling",
     "mdformat",
+    "mdformat-frontmatter",
     "mdformat-tables>=1",
     "pytest",
     "pytest-cov",
@@ -68,7 +69,8 @@ tag = true
 commit_args = "-s"
 pre_commit_hooks = [
     "cargo update --workspace",
-    "git add Cargo.lock",
+    "cargo update --manifest-path rust/Cargo.toml --workspace",
+    "git add Cargo.lock rust/Cargo.lock",
 ]
 
 [[tool.bumpversion.files]]
@@ -119,7 +121,7 @@ skip = "*win32 *arm64"
 [tool.coverage.run]
 branch = true
 omit = [
-    "finance_risk/tests/integration/",
+    "finance_risk/tests/integration/*",
 ]
 
 [tool.coverage.report]
@@ -130,13 +132,6 @@ exclude_also = [
 ]
 ignore_errors = true
 fail_under = 50
-
-[tool.hatch.build]
-artifacts = [
-    "finance_risk/*.dll",
-    "finance_risk/*.dylib",
-    "finance_risk/*.so",
-]
 
 [tool.hatch.build.sources]
 src = "/"
@@ -155,11 +150,20 @@ packages = [
     "Cargo.lock",
 ]
 exclude = [
+    "*.dll",
+    "*.dylib",
+    "*.so",
+    "*.pyd",
     "rust/Makefile",
     "target",
 ]
 
 [tool.hatch.build.targets.wheel]
+artifacts = [
+    "finance_risk/*.dll",
+    "finance_risk/*.dylib",
+    "finance_risk/*.so",
+]
 packages = [
     "finance_risk",
 ]
