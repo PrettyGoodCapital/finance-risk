@@ -1,0 +1,55 @@
+finance_risk.finance_risk
+=========================
+
+.. py:module:: finance_risk.finance_risk
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   finance_risk.finance_risk.sample_covariance_matrix
+   finance_risk.finance_risk.ledoit_wolf_covariance_matrix
+   finance_risk.finance_risk.oas_covariance_matrix
+   finance_risk.finance_risk.covariance_to_correlation
+   finance_risk.finance_risk.correlation_to_covariance
+   finance_risk.finance_risk.rolling_correlation
+   finance_risk.finance_risk.cointegration_spread
+   finance_risk.finance_risk.transfer_entropy
+   finance_risk.finance_risk.twap_schedule
+   finance_risk.finance_risk.vwap_schedule
+   finance_risk.finance_risk.almgren_chriss_market_impact
+   finance_risk.finance_risk.optimal_execution_trajectory
+   finance_risk.finance_risk.factor_risk_decomposition
+
+
+Module Contents
+---------------
+
+.. py:function:: sample_covariance_matrix(data: collections.abc.Sequence[collections.abc.Sequence[float]], frequency: float) -> list[list[float]]
+
+.. py:function:: ledoit_wolf_covariance_matrix(data: collections.abc.Sequence[collections.abc.Sequence[float]], frequency: float) -> tuple[list[list[float]], float]
+
+.. py:function:: oas_covariance_matrix(data: collections.abc.Sequence[collections.abc.Sequence[float]], frequency: float) -> tuple[list[list[float]], float]
+
+.. py:function:: covariance_to_correlation(covariance: collections.abc.Sequence[collections.abc.Sequence[float]]) -> list[list[float]]
+
+.. py:function:: correlation_to_covariance(correlation: collections.abc.Sequence[collections.abc.Sequence[float]], volatility: collections.abc.Sequence[float]) -> list[list[float]]
+
+.. py:function:: rolling_correlation(x: collections.abc.Sequence[float], y: collections.abc.Sequence[float], window: int) -> list[float]
+
+.. py:function:: cointegration_spread(y: collections.abc.Sequence[float], x: collections.abc.Sequence[float]) -> tuple[float, float, list[float]]
+
+.. py:function:: transfer_entropy(source: collections.abc.Sequence[float], target: collections.abc.Sequence[float], bins: int, lag: int) -> float
+
+.. py:function:: twap_schedule(total_quantity: float, periods: int) -> list[float]
+
+.. py:function:: vwap_schedule(total_quantity: float, volume_curve: collections.abc.Sequence[float]) -> list[float]
+
+.. py:function:: almgren_chriss_market_impact(quantity: float, volatility: float, daily_volume: float, spread: float, temporary_impact: float, permanent_impact: float) -> tuple[float, float, float, float]
+
+.. py:function:: optimal_execution_trajectory(total_quantity: float, periods: int, risk_aversion: float) -> tuple[list[float], list[float]]
+
+.. py:function:: factor_risk_decomposition(weights: collections.abc.Sequence[float], factor_loadings: collections.abc.Sequence[collections.abc.Sequence[float]], factor_covariance: collections.abc.Sequence[collections.abc.Sequence[float]], specific_variance: collections.abc.Sequence[float]) -> tuple[float, float, float, list[float]]
+
