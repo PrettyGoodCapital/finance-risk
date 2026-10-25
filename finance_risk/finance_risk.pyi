@@ -1,3 +1,4 @@
+<<<<<<< before updating
 from collections.abc import Sequence
 
 def sample_covariance_matrix(data: Sequence[Sequence[float]], frequency: float) -> list[list[float]]: ...
@@ -25,3 +26,7 @@ def factor_risk_decomposition(
     factor_covariance: Sequence[Sequence[float]],
     specific_variance: Sequence[float],
 ) -> tuple[float, float, float, list[float]]: ...
+=======
+class Example:
+    def __init__(self, value: str) -> None: ...
+>>>>>>> after updating
